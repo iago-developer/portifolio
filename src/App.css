@@ -189,9 +189,8 @@ div#root {
       }
 
       section#technologies {
-        /* background-color: #f5f7fa; */
-        background-color: red;
-        height: 100%;
+        background-color: #f5f7fa;
+        height: 100% !important;
         width: 100%;
         color: #1a1a1a;
         padding: 30px;
