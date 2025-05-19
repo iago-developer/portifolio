@@ -134,9 +134,6 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <section id="contacts">
-        <article></article>
-      </section>
     </main>
   );
 }
