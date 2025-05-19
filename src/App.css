@@ -212,62 +212,62 @@ div#root {
           padding: 40px;
           gap: 40px;
         }
-      }
 
-      & div.table-technologies {
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.518);
-        border-radius: 10px;
-        height: 450px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-        padding: 30px;
-        gap: 2px;
-        overflow: hidden;
-        transform: transform 0.5s ease;
-
-        & div.technology {
+        & div.table-technologies {
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.518);
           border-radius: 10px;
-          overflow: hidden;
-          padding: 10px;
-          height: 80%;
-          min-width: 300px;
+          height: 450px;
+          width: 100%;
           display: flex;
+          align-items: center;
           justify-content: center;
+          flex-wrap: wrap;
+          flex-direction: column;
+          padding: 30px;
+          gap: 2px;
+          overflow: hidden;
+          transform: transform 0.5s ease;
 
-          & span.title-technology {
-            background-color: rgba(0, 0, 0, 0.8);
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            position: absolute;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-          }
-
-          & img {
+          & div.technology {
             border-radius: 10px;
-            height: 100%;
-            width: 100%;
-          }
+            overflow: hidden;
+            padding: 10px;
+            height: 80%;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
 
-          &:hover {
-            opacity: 100%;
-          }
+            & span.title-technology {
+              background-color: rgba(0, 0, 0, 0.8);
+              height: 100%;
+              width: 100%;
+              opacity: 0;
+              position: absolute;
+              color: #fff;
+              padding: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: row;
+              font-size: 1rem;
+              cursor: pointer;
+              transition: all 0.3s ease;
+            }
 
-          & img {
-            height: 100%;
-            width: 300px;
+            & img {
+              border-radius: 10px;
+              height: 100%;
+              width: 100%;
+            }
+
+            &:hover {
+              opacity: 100%;
+            }
+
+            & img {
+              height: 100%;
+              width: 300px;
+            }
           }
         }
       }
