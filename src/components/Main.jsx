@@ -25,8 +25,10 @@ export default function Main() {
             limpas e agradáveis aos meus clientes.
           </p>
         </article>
-        <div className="button-home">
-          <a href="#projects">Meus Projetos</a>
+        <div className="button-home-area">
+          <div className="button-home">
+            <a href="#projects">Meus Projetos</a>
+          </div>
         </div>
       </section>
       <br />
