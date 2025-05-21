@@ -42,12 +42,12 @@ export default function Main() {
             <li>Pretendo me tornar um desenvolvedor full-stack.</li>
             <li>Atualmente curso Tecnologia em Sistemas para Internet.</li>
             <li>
-              Sou fanático por tecnologia e gosto bastante da área do turismo e
-              da gastronomia.
+              Sou fanático por tecnologia e gosta muito da área do turismoe da gastronomia.
             </li>
           </ul>
         </article>
         <div className="image-about">
+          <span></span>
           <img src={ProfileImage} alt="profile." />
         </div>
       </section>
@@ -111,26 +111,32 @@ export default function Main() {
         <div className="table-projects">
           <div className="project">
             <span className="title-project">
+              <a href="https://cinematec.github.io/CineTec/" target="_blank">
               <img src={LogoCineTec} alt="logo do Cine Tec." />
               <br />
-              <h3>Site de cinema</h3>
-              <h3>Cine Tec.</h3>
+                <h3>Site de cinema</h3>
+                <h3>Cine Tec.</h3>
+              </a>
             </span>
             <img src={Project01} alt="CineTec" />
           </div>
           <div className="project">
             <span className="title-project">
+              <a href="https://tcc-project-mu.vercel.app/" target="_blank">
               <img src={LogoGitL} alt="logo do Git Learning." />
               <br />
               <h3>App guia de estudos</h3>
               <h3>Git Learning.</h3>
+              </a>
             </span>
             <img src={Project02} alt="Nexuschat" />
           </div>
           <div className="project">
             <span className="title-project">
-              <h3>Chat para Bate Papo</h3>
-              <h3>NexusChat.</h3>
+              <a href="https://nexuschat-frontend.onrender.com/" target="_blank">
+                <h3>Chat para Bate Papo</h3>
+                <h3>NexusChat.</h3>
+              </a>
             </span>
             <img src={Project03} alt="Nexuschat" />
           </div>

@@ -1,0 +1,73 @@
+@media screen and (max-width: 767px) {
+  div.button-nav-header {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 20px;
+
+    & input {
+      display: none;
+    }
+
+    & label {
+      height: 22px;
+      width: 33px;
+      display: block;
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+
+      & span {
+        background-color: #fff;
+        border-radius: 8px;
+        height: 4px;
+        width: 100%;
+        position: absolute;
+      }
+
+      & span {
+        transition: all 0.3s ease;
+      }
+
+      & span:nth-child(1) {
+        top: 0px;
+      }
+      & span:nth-child(2) {
+        transition: all 0s ease;
+        top: 8px;
+      }
+      & span:nth-child(3) {
+        top: 16px;
+      }
+    }
+
+    & input:checked ~ label > span:nth-child(1) {
+      transform: rotate(40deg);
+      top: 8px;
+    }
+    & input:checked ~ label > span:nth-child(2) {
+      opacity: 0;
+    }
+    & input:checked ~ label > span:nth-child(3) {
+      transform: rotate(-40deg);
+      top: 8px;
+    }
+  }
+
+  div.nav-header {
+    height: 300px !important;
+    padding-bottom: 10px;
+    position: fixed !important;
+    top: -300px !important;
+    flex-direction: row;
+    transition: all .8s ease;
+
+    & nav {
+      height: 100% !important;
+      width: 100% !important;
+      padding-top: 20px !important;
+      flex-direction: column !important;
+    }
+  }
+}
