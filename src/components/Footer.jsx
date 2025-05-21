@@ -20,7 +20,7 @@ export default function Footer() {
             </div>
             <div className="line-contacts">
                 <a href="https://instagram.com/iago_028/" target="_blank" className="instaIcon"><img src={ LogoInsta } alt="Logo do instagram" width={50}/></a>
-                <a href="" target="_blank" className="zapIcon"><img src={ LogoZap } alt="Logo do zap" width={56} /></a>
+                <a href="https://api.whatsapp.com/send?phone=5584996383032" target="_blank" className="zapIcon"><img src={ LogoZap } alt="Logo do zap" width={56} /></a>
             </div>
         </footer>
     )
