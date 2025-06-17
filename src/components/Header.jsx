@@ -1,34 +1,71 @@
-import React from "react";
+import React, { useEffect } from "react";
+import styled from "styled-components";
 
-const buttonNavbar = () => {
-  const buttonNavbar = document.querySelector("div.button-nav-header");
-  const navbar = document.querySelector("div.nav-header");
-  const check = document.querySelector("input#check");
+const ButtonSidebar = styled.div`
+  display: none;
 
-  // switch (navbar.style.top) {
-  //   case "" && check.checked == false:
-  //     window.alert("")
-  //     console.log("o" + navbar.style.top);
-  //     navbar.style.top = "300px";
-  //     break;
-  //   case navbar.style.top == "300px" && check.checked:
-  //   window.alert("o")  
-  //   navbar.style.top = "-300px";
-  //     break;
-  //   default:
-  //     navbar.style.top = "";
-  //     break;
-  // }
-  if(navbar.style.top == "" && check.checked == false) {
-    navbar.style.cssText = "top: 226px !important;";
-  }else if(navbar.style.top == "226px" && check.checked) {
-    navbar.style.cssText = "top: -300px !important;";
-  }else if(navbar.style.top == "-300px" && check.checked == false) {
-    navbar.style.cssText = "top: 226px !important;";
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+
+    & input {
+      display: none;
+    }
+
+    & label {
+      height: 33px;
+      width: 30px;
+      display: block;
+      position: relative;
+      cursor: pointer;
+
+      & span {
+        background-color: #fff;
+        border-radius: 6px;
+        height: 5px;
+        width: 100%;
+        transition: all 0.4s ease;
+        position: absolute;
+
+        &:nth-child(1) {
+          top: 0px;
+        }
+
+        &:nth-child(2) {
+          top: 8px;
+        }
+        &:nth-child(3) {
+          top: 16px;
+        }
+      }
+    }
   }
-};
+`;
 
+const checkDisplay = () => {
+  const buttonSidebar = document.querySelector("#buttonSidebar");
+  const sidebar = document.querySelector("#sidebar");
+  const inputCheckBox = document.querySelector("#checkBox");
+  const body = document.querySelector("body");
+
+  // inputCheckBox.checked == true ? sidebar.style.display = "block" : sidebar.style.display = "none";
+
+  console.log(sidebar.style.left)
+  if(inputCheckBox.checked && (sidebar.style.left == "" || sidebar.style.left == "-490px")) {
+    sidebar.style.backgroundColor = "rgba(0,0,0, 0.0)";
+    body.style.overflowY = "hidden";
+    sidebar.style.display = "block";
+    sidebar.style.left = "0px";
+  }else {
+    sidebar.style.backgroundColor = "rgba(0,0,0, 0.0)";
+    sidebar.style.left = "-490px";
+    body.style.overflowY = "auto";
+  }
+}
 export default function Header() {
+
+  
   return (
     <header>
       <div className="title-header">
@@ -36,19 +73,16 @@ export default function Header() {
         <hr />
       </div>
       <br />
-      <div className="button-nav-header">
-        <input type="checkbox" name="check" id="check" />
-        <label
-          htmlFor="check"
-          onClick={() => {
-            buttonNavbar();
-          }}
-        >
+      <ButtonSidebar id="buttonSidebar" onClick={() => {
+        checkDisplay();
+      }}>
+        <input type="checkbox" name="checkBox" id="checkBox" />
+        <label htmlFor="checkBox">
           <span></span>
           <span></span>
           <span></span>
         </label>
-      </div>
+      </ButtonSidebar>
     </header>
   );
 }

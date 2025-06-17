@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import ProfileImage from "./images/profile.jpg";
 import Project01 from "./images/cinetec.png";
 import Project02 from "./images/gitL.png";
@@ -13,6 +14,7 @@ import LogoMYQSL from "./images/logoMysql.png";
 import LogoReactJS from "./images/logoReact.png";
 import LogoNodeJS from "./images/logoNodejs.png";
 
+const Objectives = styled.div ``;
 export default function Main() {
   return (
     <main>
@@ -38,11 +40,11 @@ export default function Main() {
           <br />
           <ul>
             <li>Sou da cidade de Mossoró - RN.</li>
-            <li>Tenho 19 anos de idade.</li>
-            <li>Pretendo me tornar um desenvolvedor full-stack.</li>
+            <li>Tenho 20  anos de idade.</li>
+            <li>Sonho em me tornar um desenvolvedor full-stack.</li>
             <li>Atualmente curso Tecnologia em Sistemas para Internet.</li>
             <li>
-              Sou fanático por tecnologia e gosta muito da área do turismoe da gastronomia.
+              Sou fanático por tecnologia e futebol.
             </li>
           </ul>
         </article>
@@ -112,8 +114,8 @@ export default function Main() {
           <div className="project">
             <span className="title-project">
               <a href="https://cinematec.github.io/CineTec/" target="_blank">
-              <img src={LogoCineTec} alt="logo do Cine Tec." />
-              <br />
+                <img src={LogoCineTec} alt="logo do Cine Tec." />
+                <br />
                 <h3>Site de cinema</h3>
                 <h3>Cine Tec.</h3>
               </a>
@@ -123,17 +125,20 @@ export default function Main() {
           <div className="project">
             <span className="title-project">
               <a href="https://tcc-project-mu.vercel.app/" target="_blank">
-              <img src={LogoGitL} alt="logo do Git Learning." />
-              <br />
-              <h3>App guia de estudos</h3>
-              <h3>Git Learning.</h3>
+                <img src={LogoGitL} alt="logo do Git Learning." />
+                <br />
+                <h3>App guia de estudos</h3>
+                <h3>Git Learning.</h3>
               </a>
             </span>
             <img src={Project02} alt="Nexuschat" />
           </div>
           <div className="project">
             <span className="title-project">
-              <a href="https://nexuschat-frontend.onrender.com/" target="_blank">
+              <a
+                href="https://nexuschat-frontend.onrender.com/"
+                target="_blank"
+              >
                 <h3>Chat para Bate Papo</h3>
                 <h3>NexusChat.</h3>
               </a>
@@ -142,6 +147,17 @@ export default function Main() {
           </div>
         </div>
       </section>
+      <Objectives
+        id="objectives"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        flexDirection="column"
+      >
+        <div className="title-objectives">
+          <h2>Meus Objetivos.</h2>
+        </div>
+      </Objectives>
     </main>
   );
 }
