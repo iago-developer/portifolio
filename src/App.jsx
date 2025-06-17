@@ -32,11 +32,11 @@ const Sidebar = styled.div`
     z-index: 5;
     position: fixed;
     left: -490px;
-    transition: left 0.4s ease, background 0.4s ease 0.8s;
+    transition: left 0.5s ease, background 0.4s ease 0.8s;
 
     & .list {
       background-color: #fff;
-      box-shadow: 2px 8px 4px rgba(0,0,0,0.4);
+      box-shadow: 2px 8px 4px rgba(0, 0, 0, 0.4);
       height: 100%;
       width: 60%;
       display: flex;
@@ -47,22 +47,22 @@ const Sidebar = styled.div`
 
       & .title {
         width: 100%;
-        background-color: #1a1a1a;
-        box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        color: #fff;
+        background-color: #fff;
+        color: #000;
         padding: 30px;
         text-align: center;
       }
 
       & hr {
-        border: 2px solid #fff;
+        border: 2px solid #000;
         margin-top: 10px;
         width: 100%;
       }
 
       & div.links {
-        padding-top: 60px;
+        padding-top: 30px;
         height: 100%;
+        font-size: 1.2rem;
         display: flex;
         align-items: center;
         justify-content: start;
@@ -70,7 +70,11 @@ const Sidebar = styled.div`
         gap: 30px;
       }
 
-      & div.links > a {
+      & div.link {
+        height: 100%;
+      }
+
+      & div.links > .link > a {
         margin-top: 10px;
         color: #000;
         text-decoration: none;
@@ -145,22 +149,22 @@ const removeSidebar = () => {
   inputCheckBox.checked = false;
   sidebar.style.left = "-490px";
   body.style.overflowY = "auto";
-  
+
   // setTimeout(()=>{
-    //   sidebar.style.display = "none";
-    // }, 3000);
-  };
-  
-  const checkWidthPage = () => {
-    if (window.innerWidth <= 767) {
-      const sidebar = document.querySelector("#sidebar");
-      
-      sidebar.style.display = "block";
-    } else {
-      const body = document.querySelector("body");
-      const sidebar = document.querySelector("#sidebar");
-      sidebar.style.display = "none";
-      body.style.overflowY = "auto";
+  //   sidebar.style.display = "none";
+  // }, 3000);
+};
+
+const checkWidthPage = () => {
+  if (window.innerWidth <= 767) {
+    const sidebar = document.querySelector("#sidebar");
+
+    sidebar.style.display = "block";
+  } else {
+    const body = document.querySelector("body");
+    const sidebar = document.querySelector("#sidebar");
+    sidebar.style.display = "none";
+    body.style.overflowY = "auto";
   }
 };
 export default function App() {
@@ -188,14 +192,26 @@ export default function App() {
             <hr />
           </div>
           <div className="links">
-            <a href="#" onClick={() => removeSidebar()}>
-              Home
-            </a>
-            <a href="#about">Quem sou</a>
-            <a href="#technologies">Tecnologias</a>
-            <a href="#projects">Meus Projetos</a>
-            <a href="#objectives">Meus Objetivos</a>
-            <a href="#contacts">Meus Contatos</a>
+            <div className="link">
+              <a href="#" onClick={() => removeSidebar()}>
+                Home
+              </a>
+            </div>
+            <div className="link">
+              <a href="#about">Quem sou</a>
+            </div>
+            <div className="link">
+              <a href="#technologies">Tecnologias</a>
+            </div>
+            <div className="link">
+              <a href="#projects">Meus Projetos</a>
+            </div>
+            <div className="link">
+              <a href="#objectives">Meus Objetivos</a>
+            </div>
+            <div className="link">
+              <a href="#contacts">Meus Contatos</a>
+            </div>
           </div>
           <div className="footer">
             <hr />

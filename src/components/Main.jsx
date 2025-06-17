@@ -14,7 +14,10 @@ import LogoMYQSL from "./images/logoMysql.png";
 import LogoReactJS from "./images/logoReact.png";
 import LogoNodeJS from "./images/logoNodejs.png";
 
-const Objectives = styled.div ``;
+const Objectives = styled.div `
+  height: 100%;
+  width: 100%;
+`;
 export default function Main() {
   return (
     <main>
@@ -120,7 +123,7 @@ export default function Main() {
                 <h3>Cine Tec.</h3>
               </a>
             </span>
-            <img src={Project01} alt="CineTec" />
+            <img src={Project01} alt="CineTec" className="imageProject"/>
           </div>
           <div className="project">
             <span className="title-project">
@@ -131,7 +134,7 @@ export default function Main() {
                 <h3>Git Learning.</h3>
               </a>
             </span>
-            <img src={Project02} alt="Nexuschat" />
+            <img src={Project02} alt="Nexuschat" className="imageProject" />
           </div>
           <div className="project">
             <span className="title-project">
@@ -143,7 +146,7 @@ export default function Main() {
                 <h3>NexusChat.</h3>
               </a>
             </span>
-            <img src={Project03} alt="Nexuschat" />
+            <img src={Project03} alt="Nexuschat" className="imageProject" />
           </div>
         </div>
       </section>
