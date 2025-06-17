@@ -25,7 +25,7 @@ div#root {
     width: 100%;
 
     & header {
-      width: 100%;
+      width: 100% !important;
       background-color: #1a1a1a;
       color: #fff;
       position: fixed;
@@ -54,7 +54,7 @@ div#root {
     div.nav-header {
       background-color: #fff;
       box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.208);
-      width: 100%;
+      width: 100% !important;
       position: fixed;
       top: 140px;
       z-index: 3;
