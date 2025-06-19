@@ -14,6 +14,7 @@ const Navbar = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  gap: 60px !important;
 
   @media screen and (max-width: 767px) {
     display: none;
