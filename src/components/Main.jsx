@@ -36,7 +36,6 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <br />
       <section id="about">
         <article>
           <h2>Um pouco sobre mim...</h2>
@@ -150,7 +149,7 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <Objectives
+      {/* <Objectives
         id="objectives"
         display="flex"
         alignItems="center"
@@ -160,7 +159,7 @@ export default function Main() {
         <div className="title-objectives">
           <h2>Meus Objetivos.</h2>
         </div>
-      </Objectives>
+      </Objectives> */}
     </main>
   );
 }

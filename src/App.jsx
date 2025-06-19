@@ -24,21 +24,21 @@ const Sidebar = styled.div`
   display: none;
 
   @media screen and (max-width: 767px) {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: red;
     cursor: pointer;
     display: block;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 80%;
     z-index: 5;
     position: fixed;
-    left: -490px;
+    left: -80%;
     transition: left 0.5s ease, background 0.4s ease 0.8s;
 
     & .list {
       background-color: #fff;
       box-shadow: 2px 8px 4px rgba(0, 0, 0, 0.4);
       height: 100%;
-      width: 60%;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: start;
@@ -147,7 +147,7 @@ const removeSidebar = () => {
   const inputCheckBox = document.querySelector("#checkBox");
 
   inputCheckBox.checked = false;
-  sidebar.style.left = "-490px";
+  sidebar.style.left = "-80%";
   body.style.overflowY = "auto";
 
   // setTimeout(()=>{
@@ -230,7 +230,7 @@ export default function App() {
           <a href="#about">Quem sou</a>
           <a href="#technologies">Tecnologias</a>
           <a href="#projects">Meus Projetos</a>
-          <a href="#objectives">Meus Objetivos</a>
+          {/* <a href="#objectives">Meus Objetivos</a> */}
           <a href="#contacts">Meus Contatos</a>
         </Navbar>
       </div>

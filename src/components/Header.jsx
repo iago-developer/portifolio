@@ -52,14 +52,12 @@ const checkDisplay = () => {
   // inputCheckBox.checked == true ? sidebar.style.display = "block" : sidebar.style.display = "none";
 
   console.log(sidebar.style.left)
-  if(inputCheckBox.checked && (sidebar.style.left == "" || sidebar.style.left == "-490px")) {
-    sidebar.style.backgroundColor = "rgba(0,0,0, 0.0)";
+  if(inputCheckBox.checked && (sidebar.style.left == "" || sidebar.style.left == "-80%")) {
     body.style.overflowY = "hidden";
     sidebar.style.display = "block";
     sidebar.style.left = "0px";
   }else {
-    sidebar.style.backgroundColor = "rgba(0,0,0, 0.0)";
-    sidebar.style.left = "-490px";
+    sidebar.style.left = "-80%";
     body.style.overflowY = "auto";
   }
 }
