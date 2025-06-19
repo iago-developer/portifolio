@@ -314,8 +314,9 @@ div#root {
       & div.table-projects {
         height: 100%;
         width: 100%;
-        display: flex;
+        display: flex !important;
         justify-content: space-evenly !important;
+        gap: 150px !important;
 
         & div.project {
           border: 2px solid #fff;
